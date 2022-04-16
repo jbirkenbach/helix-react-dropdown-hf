@@ -7,7 +7,7 @@ const Dropdown = ({ options : items = [],
                     placeholderText = null}) => {
   
 
-  const [options, setOptions] = useState(noneValue ? [noneValue, ...items] : items[0]);
+  const [options, setOptions] = useState(noneValue ? [noneValue, ...items] : items);
   const [selected, setSelected] = useState(placeholderText ? placeholderText : items[0]);
   const [opened, setOpened] = useState(false);
   const container = useRef(null);
